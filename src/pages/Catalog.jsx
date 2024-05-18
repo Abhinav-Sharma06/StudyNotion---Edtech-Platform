@@ -88,7 +88,7 @@ function Catalog() {
             } cursor-pointer`}
             onClick={() => setActive(1)}
           >
-            Most Populer
+            Most Popular
           </p>
           <p
             className={`px-4 py-2 ${

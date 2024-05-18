@@ -1,9 +1,9 @@
 import React from "react"
 
-import FoundingStory from "../assets/Images/FoundingStory.png"
-import BannerImage1 from "../assets/Images/aboutus1.webp"
+import FoundingStory from "../assets/Images/foundingstory.jpeg"
+import BannerImage1 from "../assets/Images/abtus2.jpeg"
 import BannerImage2 from "../assets/Images/aboutus2.webp"
-import BannerImage3 from "../assets/Images/aboutus3.webp"
+import BannerImage3 from "../assets/Images/abtus1.jpeg"
 import Footer from "../components/Common/Footer"
 import ReviewSlider from "../components/Common/ReviewSlider"
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection"
@@ -28,10 +28,10 @@ const About = () => {
             </p>
           </header>
           <div className="sm:h-[70px] lg:h-[150px]"></div>
-          <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5">
-            <img src={BannerImage1} alt="" />
-            <img src={BannerImage2} alt="" />
-            <img src={BannerImage3} alt="" />
+          <div className="absolute bottom-0 left-[50%] grid w-[100%] translate-x-[-50%] translate-y-[30%] grid-cols-3 gap-3 lg:gap-5 ">
+            <img src={BannerImage1} alt=""  className="h-[20rem] w-[22rem]"/>
+            <img src={BannerImage2} alt="" className="h-[20rem] w-[22rem]"/>
+            <img src={BannerImage3} alt="" className="h-[20rem] w-[22rem]"/>
           </div>
         </div>
       </section>
@@ -72,7 +72,7 @@ const About = () => {
               <img
                 src={FoundingStory}
                 alt=""
-                className="shadow-[0_0_20px_0] shadow-[#FC6767]"
+                className="shadow-[0_0_20px_0] shadow-[#FC6767] h-[30rem] w-"
               />
             </div>
           </div>

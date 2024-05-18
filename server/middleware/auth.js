@@ -14,18 +14,22 @@ exports.auth = async (req, res, next) => {
 			req.body.token ||
 			req.header("Authorization").replace("Bearer ", "");
 
+			console.log("Token in auth",token)
+
 		// If JWT is missing, return 401 Unauthorized response
-		if (!token) {
+		if (!token || token === undefined) {
 			return res.status(401).json({ success: false, message: `Token Missing` });
 		}
 
 		try {
 			// Verifying the JWT using the secret key stored in environment variables
-			const decode = await jwt.verify(token, process.env.JWT_SECRET);
-			console.log(decode);
+			console.log("Before verifing the token...")
+			const decode = jwt.verify(token , process.env.JWT_SECRET);
+			console.log("decode",decode);
 			// Storing the decoded JWT payload in the request object for further use
 			req.user = decode;
 		} catch (error) {
+			console.log(error.message);
 			// If JWT verification fails, return 401 Unauthorized response
 			return res
 				.status(401)

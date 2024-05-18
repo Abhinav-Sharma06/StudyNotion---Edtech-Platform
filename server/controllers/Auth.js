@@ -145,13 +145,16 @@ exports.login = async (req, res) => {
         { email: user.email, id: user._id, role: user.role },
         process.env.JWT_SECRET,
         {
-          expiresIn: "24h",
+          expiresIn: "72h",
         }
-      )
+      );
+
+      console.log(token)
 
       // Save token to user document in database
       user.token = token
       user.password = undefined
+      console.log(user);
       // Set cookie for token and return success response
       const options = {
         expires: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),

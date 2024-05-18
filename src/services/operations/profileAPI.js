@@ -12,10 +12,12 @@ const {
 } = profileEndpoints
 
 export function getUserDetails(token, navigate) {
+  
   return async (dispatch) => {
     const toastId = toast.loading("Loading...")
     dispatch(setLoading(true))
     try {
+      console.log(token);
       const response = await apiConnector("GET", GET_USER_DETAILS_API, null, {
         Authorization: `Bearer ${token}`,
       })

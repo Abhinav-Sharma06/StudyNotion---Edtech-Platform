@@ -1,18 +1,18 @@
 import React from 'react'
 import CTAButton from "../../../components/core/HomePage/Button";
 import { FaArrowRight } from "react-icons/fa";
-import Instructor from "../../../assets/Images/Instructor.png";
+import Instructor from "../../../assets/Images/instructor.jpeg";
 import HighlightText from './HighlightText';
 
 const InstructorSection = () => {
   return (
     <div>
-        <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="flex flex-col lg:flex-row gap-4 items-center">
           <div className="lg:w-[50%]">
             <img
               src={Instructor}
               alt=""
-              className="shadow-white shadow-[-20px_-20px_0_0]"
+              className="shadow-white shadow-[-20px_-20px_0_0] h-[27rem]"
             />
           </div>
           <div className="lg:w-[50%] flex gap-10 flex-col">

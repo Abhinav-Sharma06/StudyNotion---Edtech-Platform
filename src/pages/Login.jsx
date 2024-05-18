@@ -1,4 +1,5 @@
-import loginImg from "../assets/Images/login.webp"
+// import loginImg from "../assets/Images/login.webp"
+import login from "../assets/Images/login1.jpeg"
 import Template from "../components/core/Auth/Template"
 
 function Login() {
@@ -7,7 +8,7 @@ function Login() {
       title="Welcome Back"
       description1="Build skills for today, tomorrow, and beyond."
       description2="Education to future-proof your career."
-      image={loginImg}
+      image={login}
       formType="login"
     />
   )
